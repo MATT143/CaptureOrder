@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ccw</title>
+    <style>
+            label {color:maroon}
+        </style>
+</head>
+<body style="background-color:rgb(219, 244, 245)">
+<div>
+    <h1 style="color: darkblue;">CCW</h1>
+    <form action="data" >{% csrf_token %}
+        <fieldset>
+            <label >Web Order Id:</label>
+            <div name="webOrderId">{{wid}}</div>
+        </fieldset>
+        <fieldset>
+            <label>OFFER</label>
+             <select name="offerName" >
+                <option value="A-WX-NAMED-USER">A-WX-NAMED-USER</option>
+                <option value="A-WX-ACTIVE-USER">A-WX-ACTIVE-USER</option>
+                <option value="A-WX-EMP-COUNT">A-WX-EMP-COUNT</option>
+                 <option value="ELA2-M">ELA2-M</option>
+                 <option value="EMSP-LIC-SW-SUB">EMSP-LIC-SW-SUB</option>
+            </select>
+
+            <label>Quantity</label>
+            <input type="number" name="qty">
+        </fieldset>
+        <fieldset>
+            <label>Requested Start Date</label>
+            <input type="date" name="rsd">
+            <label>Initial Term</label>
+            <select name="initialTerm" >
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+            </select>
+            <label>Renewal Term</label>
+            <select name="renewalTerm" >
+                <option value="0">0</option>
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label>Provisioning Email</label>
+            <input type="text" name="provEmail" width="40%">
+        </fieldset>
+        <fieldset>
+            <label>Looking for True Forward??</label>
+            <select name="tfeligible" >
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+
+        </fieldset>
+        <input type="submit" value="Submit Order">
+    </form>
+</div>
+</body>
+</html>
